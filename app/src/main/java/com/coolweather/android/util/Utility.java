@@ -29,7 +29,7 @@ public class Utility {
                     province.setProvinceName(provinceObject.getString("name"));
                     province.save();
                 }
-
+                return true;
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -74,7 +74,9 @@ public class Utility {
                     county.setCityId(cityId);
                     county.setCountyName(countyObject.getString("name"));
                     county.setWeatherId(countyObject.getString("weather_id"));
+                    county.save();
                 }
+                return true;
             } catch (JSONException e) {
                 e.printStackTrace();
             }
